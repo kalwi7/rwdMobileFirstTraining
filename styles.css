@@ -9,6 +9,10 @@
 
 /*header*/
 
+* {
+    transition: all ease-in-out 250ms;
+}
+
 
 body {
     margin: 0;
@@ -59,6 +63,14 @@ h1{
 }
 
 
+p{
+    margin-top: 0px;
+}
+
+p:last-of-type{
+    margin-bottom: 0;
+}
+
 
 /* start-hero */
 
@@ -66,7 +78,9 @@ h1{
 
 .wrapper{
     width: 95%;
+    max-width: 950px;
     margin: 0 auto;
+    
 
 }
 .start-hero{
@@ -105,21 +119,27 @@ h1{
   
 }
 
-.button-accent{
+.button{
     color: #00ff6c;
     margin-top: 2rem;
 }
 
-.button-accent:hover{
+.button:hover{
     background: #00ff6c;
     color: #232323;
+}
+
+.small-button{
+    font-size: .8em;
+    margin-top: .3rem;
+        
 }
 
 /*about-us*/
 
 .home-about-textbox{
     background-color: #232323;
-    padding: 3.2em;
+    padding: 3.8em;
     width:100vw;
     margin-left: -2.5%;
     outline: 2px solid #00ff6c;
@@ -138,12 +158,55 @@ h1{
     padding: 0 .110em
 }
 
+/* gallery */
+
+.gallery{
+    margin: 2rem 0;
+}
+
+.galery-item{
+    position: relative;
+    margin: 0;
+}
+
+.galery-item img{
+    display: block;
+}
+.galery-desc{
+    position: absolute;
+    z-index: 2;
+    left: 0em;
+    right: 0em;
+    bottom: 0rem;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.galery-desc p{
+    margin: .4em;
+}
+
+
+
 @media (min-width:600px){
     h1{
         font-size: 2.4rem;
     }
     .home-about-textbox h1{
         top: .3em
+    }
+    
+      .home-about-textbox {
+        top: .em;
+        padding: 4.8em;
+        line-height: 1.4;
+        font-size: 1.06em;
+    }
+    
+    .galery-item{
+        width: 50%;
+        float: left;
     }
 }
 
@@ -165,8 +228,15 @@ h1{
         font-size: 1.3rem;
     }
     .home-about-textbox{
-        width:50%;
-        margin-left: -2.5%;    
+        width: 50%;
+        margin-left: -2.5%;
+        padding: 5rem;
+        top: -4em;
+        text-align: left;
+        box-shadow: 0px 0px 50px 1px rgba(0,0,0,.6);
+        line-height: 1.5em;
+        font-size: 1.1em
+            
     }
 
     .home-about-textbox h1{
@@ -177,8 +247,22 @@ h1{
     }
     .about-us{
         background-image: url(img/who-we-are.jpg);
-        padding-bottom: 10rem;
+        padding-bottom: 10em;
         background-repeat: no-repeat;
+    }
+    
+      .galery-item{
+        width: 33.333%;
+        float: left;
+        overflow: hidden;
+    }
+    
+    .galery-desc{
+        transform: translateY(170%);
+    }
+    
+    .galery-item:hover .galery-desc{
+        transform: translateY(0);
     }
 }
 
