@@ -71,6 +71,12 @@ p:last-of-type{
     margin-bottom: 0;
 }
 
+section:after,
+footer:after{
+    content: '';
+    display: block;
+    clear: both;
+}
 
 /* start-hero */
 
@@ -135,6 +141,17 @@ p:last-of-type{
         
 }
 
+.button-dark{
+    color: black;
+    border-color: black;
+    margin: 0;
+}
+
+.button-dark:hover{
+    color: #00ff6c;
+    border-color: black;
+    background: #232323;
+}
 /*about-us*/
 
 .home-about-textbox{
@@ -161,7 +178,7 @@ p:last-of-type{
 /* gallery */
 
 .gallery{
-    margin: 2rem 0;
+    margin-top: 2rem;
 }
 
 .galery-item{
@@ -187,7 +204,45 @@ p:last-of-type{
     margin: .4em;
 }
 
+/* cta */
 
+.cta{
+    background-color: #00ff6c;
+    margin-top: 0;
+    padding: 5px;
+}
+.cta .wrapper{
+    margin-bottom: 2em;
+}
+
+
+/* footer */
+
+footer{
+    background: #232323;
+    color: whitesmoke;
+    text-align: left;
+    padding: 2em 0;
+    font-size: .9em;
+}
+
+
+.unstyled-list{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+[class^=col-]{
+    width: 100%;
+    margin-top: 1.2em;
+}
+
+.col-1{
+    width: 33.3333%;
+    float: left
+}
 
 @media (min-width:600px){
     h1{
@@ -198,7 +253,6 @@ p:last-of-type{
     }
     
       .home-about-textbox {
-        top: .em;
         padding: 4.8em;
         line-height: 1.4;
         font-size: 1.06em;
@@ -208,6 +262,26 @@ p:last-of-type{
         width: 50%;
         float: left;
     }
+    
+    [class^=col-]{
+    float: left;
+    padding: 0 .6em;
+}
+
+[class^=col-]:first-child{
+   padding-left: 0;
+}
+
+[class^=col-]:last-child{
+    padding-right: 0;
+}
+.col-3{
+    width: 50%
+}
+
+.col-1{
+    width: 16.666%;
+}
 }
 
 @media (min-width:850px) {
